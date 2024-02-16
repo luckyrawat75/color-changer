@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+    <style>
+        h1,
+        h3 {
+            font-size: 40px;
+            font-weight: 1000;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 1000;
+            margin-top: 20px;
+        }
+
+        #flower {
+            width: 150px;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border box;
+            font-family: sans-serif;
+        }
+
+        #combo {
+            width: 250px;
+        }
+
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(23, 23, 23, 0.6);
+            box-shadow: 10px 20px 20px;
+        }
+
+        .box {
+            width: 90px;
+            height: 90px;
+            border: 1px solid rgba(0, 0, 0, 0.784);
+            border-radius: 50%;
+        }
+
+        #box1 {
+            background-color: #F3895F;
+        }
+
+        #box2 {
+            background-color: #37B586;
+        }
+
+        #box3 {
+            background-color: #50623A;
+        }
+
+        #box4 {
+            background-color: #E6A4B4;
+        }
+
+        #box5 {
+            background-color: #D24545;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Back-Ground Color Changer</h1>
+        <h3>project</h3>
+        <img src="/flower.png" alt="flower image" id="flower">
+        <p>Click on the below circle to change the background color.</p>
+        <div class="container">
+            <div class="box" id=box1></div>
+            <div class="box" id=box2></div>
+            <div class="box" id=box3></div>
+            <div class="box" id=box4></div>
+            <div class="box" id=box5></div>
+
+        </div>
+        <br>
+
+        <p><i>with HTML,CSS and JAVASCRIPT</i></p>
+        <img src="/combo.png" id="combo">
+    </section>
+
+
+
+    <script>
+        const button = document.querySelectorAll('.box')
+        const body = document.querySelector("body")
+
+        button.forEach(function (box) {
+            box.addEventListener('click', function (color) {
+                if (color.target.id === 'box1') {
+                    body.style.backgroundColor = "#F3895F";
+
+                }
+                if (color.target.id === 'box2') {
+                    body.style.backgroundColor = "#37B586";
+                }
+                if (color.target.id === 'box3') {
+                    body.style.backgroundColor = '#50623A';
+                }
+                if (color.target.id === 'box4') {
+                    body.style.backgroundColor = '#E6A4B4';
+                }
+                if (color.target.id === 'box5') {
+                    body.style.backgroundColor = '#D24545';
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
